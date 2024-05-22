@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+background: #1A4D2E;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 100px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  background: #E8DFCA;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  padding: 10px;
+  max-width: 1000px;
+  max-height: 600px;
+  margin: 100px auto;
+  /* border: 1px solid red; */
+}
+
+.monkey__images {
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.monkey__images img {
+  cursor: pointer;
+}
+
+.monkey__text {
+  padding: 20px 0px;
+}
+
+.monkey__text h2 {
+  color: #7469B6;
+  font-size: 2rem;
+}
+
+.monkey__text p {
+  color: #7469B6;
+  font-size: 1.125rem;
+}
+
+.monkey__section {
+  display: none;
+}
+
+.monkey__section.ativo {
+  display: block;
+  animation: show-right 0.5s forwards;
+} 
+
+.monkey__section.ativo.show-down {
+  display: block;
+  animation: show-down 0.5s forwards;
+} 
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
