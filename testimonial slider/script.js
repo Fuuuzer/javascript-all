@@ -1,21 +1,15 @@
-const slider = document.querySelectorAll('.slider');
+const slider = document.querySelectorAll(".slider");
 let currentSlide = 0;
-const slideInterval = 3000;
 
-
-function nextSlide() {
-  slider[currentSlide].classList.remove('active');
+function startSlider() {
+  let jorge = Math.floor(Math.random() * (4000 - 1000 + 1)) + 1000;
+  slider[currentSlide].classList.remove("active");
 
   currentSlide = (currentSlide + 1) % slider.length;
 
-  slider[currentSlide].classList.add('active')
+  slider[currentSlide].classList.add("active");
 
-  console.log(currentSlide)
-
+  setTimeout(startSlider, jorge);
 }
 
-function startSlider() {
-  setInterval(nextSlide, slideInterval)
-}
-
-startSlider()
+startSlider();
