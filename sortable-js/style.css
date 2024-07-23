@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Urbanist", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  color: #fff;
+  padding: 15px 30px;
+  background: rgb(44, 44, 151);
+  border-radius: 4px;
+}
+
+.list {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.list__item {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 15px;
+  background: rgb(46, 145, 202);
+  /* border: 1px solid black; */
+  border-radius: 6px;
+} 
+
+.list__item-chosen {
+  background: rgb(6, 6, 100);
+}
